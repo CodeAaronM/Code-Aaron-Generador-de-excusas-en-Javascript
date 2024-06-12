@@ -4,6 +4,7 @@ import "./style.css";
 
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
+import { Button } from "bootstrap";
 
 window.onload = () => {
   //write your code here
@@ -37,3 +38,7 @@ const generateExcuse = () => {
     when[whenIndex];
   return a;
 };
+const button = document.querySelector("#boton");
+button.addEventListener("click", event => {
+  document.querySelector("#excuse").innerHTML = generateExcuse();
+});
