@@ -22,14 +22,14 @@ const generateExcuse = () => {
     "while I was praying"
   ];
   function randomize(number){
-    e = Math.floor(Math.random() * number)
+    e = Math.floor(Math.random() * number.length)
     return e
   }
 
-  let whoIndex = randomize(who.length);
-  let actionIndex = randomize(action.length);
-  let whatIndex = randomize(what.length);
-  let whenIndex = randomize(when.length);
+  let whoIndex = randomize(who);
+  let actionIndex = randomize(action);
+  let whatIndex = randomize(what);
+  let whenIndex = randomize(when);
   let a =
     who[whoIndex] +
     " " +
