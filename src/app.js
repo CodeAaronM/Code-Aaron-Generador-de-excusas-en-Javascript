@@ -7,8 +7,6 @@ import "./assets/img/4geeks.ico";
 import { Button } from "bootstrap";
 
 window.onload = () => {
-  //write your code here
-
   document.querySelector("#excuse").innerHTML = generateExcuse();
 };
 
@@ -23,11 +21,15 @@ const generateExcuse = () => {
     "during my lunch",
     "while I was praying"
   ];
+  function randomize(number){
+    e = Math.floor(Math.random() * number)
+    return e
+  }
 
-  let whoIndex = Math.floor(Math.random() * who.length);
-  let actionIndex = Math.floor(Math.random() * action.length);
-  let whatIndex = Math.floor(Math.random() * what.length);
-  let whenIndex = Math.floor(Math.random() * when.length);
+  let whoIndex = randomize(who.length);
+  let actionIndex = randomize(action.length);
+  let whatIndex = randomize(what.length);
+  let whenIndex = randomize(when.length);
   let a =
     who[whoIndex] +
     " " +
