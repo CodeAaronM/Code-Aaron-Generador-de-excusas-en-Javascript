@@ -25,19 +25,14 @@ const generateExcuse = () => {
     e = Math.floor(Math.random() * number.length)
     return e
   }
-
-  let whoIndex = randomize(who);
-  let actionIndex = randomize(action);
-  let whatIndex = randomize(what);
-  let whenIndex = randomize(when);
   let a =
-    who[whoIndex] +
+    who[randomize(who)] +
     " " +
-    action[actionIndex] +
+    action[randomize(action)] +
     " " +
-    what[whatIndex] +
+    what[randomize(what)] +
     " " +
-    when[whenIndex];
+    when[randomize(when)];
   return a;
 };
 const button = document.querySelector("#boton");
